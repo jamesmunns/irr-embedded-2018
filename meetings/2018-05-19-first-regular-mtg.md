@@ -28,6 +28,7 @@ This is the first week of the "learning section". I would like the team to focus
     * [guide for using CI images] inside the CI repo
     * [stm32f103xx-hal] crate is probably a good place for initial testing
     * [discovery guide] is a little outdate, but good for a first read
+* Writing bios for the website
 
 [lives here]: https://github.com/rust-lang/rust/tree/master/src/ci
 [old blog post]: https://internals.rust-lang.org/t/rust-ci-release-infrastructure-changes/4489
