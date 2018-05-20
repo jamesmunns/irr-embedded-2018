@@ -6,9 +6,18 @@ Probably nothing yet, but here just in case!
 
 ### Hideki
 
+* Published Binary Heap Crate
+    * Also set up CI with Cross Compilation
+    * Received a first pull request, worked with CI, merged!
+
 ### Vaishali
 
+* Refreshing Rust language knowledge
+* Looked as SSD1306
+
 ### James
+
+* N/A
 
 ## Discussion Items
 
@@ -46,12 +55,25 @@ This is the first week of the "learning section". I would like the team to focus
 
 ### Hideki
 
+* Look into `-hal` crates and understand how embedded Rust toolchain works
+* start looking docker
+
 ### Vaishali
 
+* Improve knowledge regarding docker
+* Start getting a high level overview of the CI
+* Try running tests locally
+
 ### James
+
+* Also try and learn more about the CI
+* Try and find good learning material for docker, and embedded rust
+* Reach out to maintainers of CI to make intoductions, once we have an initial plan, sanity check
 
 ## After this week
 
 # Action Items
+
+* James to provide docker resources
 
 # Notes
