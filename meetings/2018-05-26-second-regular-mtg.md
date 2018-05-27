@@ -17,6 +17,10 @@
 * didn't run docker actually yet
 
 ### Vaishali
+* Built and installed rustc. It's not bit straightforward. The solutions in [this](https://github.com/rust-lang/rust/issues/40108) issue works.
+* Spent time in learning about docker. Also, set up a dummy project to learn on how Travic CI and Docker image works.
+  [This](https://medium.com/mobileforgood/patterns-for-continuous-integration-with-docker-on-travis-ci-71857fff14c5) is a good resource to understand that.
+* Checked on how rust CI is structured at the moment. Blog post is in process. Should be up for the review by the EOD.
 
 ### James
 
@@ -39,6 +43,7 @@
     * Rust 2018 ships Calendar Week 37 (2018-09-10 or so)
     * We must have "landed" in Beta by Calendar Week 31 (2018-07-30 or so)
     * Earlier is better, to catch any mistakes early
+* Do we want to think in the direction of writing target(Arch) specific tests?
 
 ## Plan for this week
 
@@ -48,6 +53,10 @@
 * (optional) Play with DISCOVERY board
 
 ### Vaishali
+
+* Run existing CI with different docker images
+* Plan on the kind of tests we want to write
+* (extra) Contribute to [ssd1306 driver](https://github.com/jamwaffles/ssd1306) crate
 
 ### James
 
