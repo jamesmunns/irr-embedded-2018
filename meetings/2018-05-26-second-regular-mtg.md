@@ -4,12 +4,16 @@
 
 ### Hideki
 
-* https://gist.github.com/sekineh/87c1c8395cd64a98afbe3b34d060e153
-    * I wrote HOW TO document for compiling a embedded crate. (from fresh install of Ubuntu)
+* Wrote HOW TO document for compiling a embedded crate. (from fresh install of Ubuntu)
+    * https://gist.github.com/sekineh/87c1c8395cd64a98afbe3b34d060e153
     * `cortex-m` crate compiles on beta; will compile on the next stable.
     * `-hal` crate compiles on nightly; `panic-itm` is the blocker.
     * `panic-itm` will be updated once when a @japaric's pull request is merged successfully.
     * https://github.com/rust-lang/rust/pull/50338
+* Reviewed travis setting: 
+    * https://github.com/rust-lang/rust/blob/master/.travis.yml#L241-L261
+    * `$RUN_SCRIPT` is the core script of CI
+    * typical `$RUN_SCRIPT` is: `src/ci/init_repo.sh . $HOME/rustsrc && src/ci/docker/run.sh $IMAGE`
 
 ### Vaishali
 
