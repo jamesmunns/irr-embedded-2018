@@ -10,7 +10,7 @@
     * `-hal` crate compiles on nightly; `panic-itm` is the blocker.
     * `panic-itm` will be updated once when a @japaric's pull request is merged successfully.
     * https://github.com/rust-lang/rust/pull/50338
-* Reviewed travis setting: 
+* Reviewed travis setting:
     * https://github.com/rust-lang/rust/blob/master/.travis.yml#L241-L261
     * `$RUN_SCRIPT` is the core script of CI
     * typical `$RUN_SCRIPT` is: `src/ci/init_repo.sh . $HOME/rustsrc && src/ci/docker/run.sh $IMAGE`
@@ -60,4 +60,10 @@
 
 ### James
 
+* Review blog post from Vaishali
+* Review guide from Hideki
+* Put together skeleton for CI Plan/Email to KennyTM
+
 ## After this week
+
+N/A
