@@ -14,6 +14,7 @@
     * https://github.com/rust-lang/rust/blob/master/.travis.yml#L241-L261
     * `$RUN_SCRIPT` is the core script of CI
     * typical `$RUN_SCRIPT` is: `src/ci/init_repo.sh . $HOME/rustsrc && src/ci/docker/run.sh $IMAGE`
+* didn't run docker actually yet
 
 ### Vaishali
 
@@ -42,6 +43,9 @@
 ## Plan for this week
 
 ### Hideki
+
+* Try to run existing CI locally using docker
+* (optional) Play with DISCOVERY board
 
 ### Vaishali
 
