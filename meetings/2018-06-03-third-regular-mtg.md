@@ -9,7 +9,8 @@
 
 ### Vaishali
 
-* TODO
+* Run CI locally
+* Work on blog post (planning to gather more information on kind tests we have for different targets)
 
 ### James
 
@@ -27,7 +28,8 @@
 
 ### Vaishali
 
-* TODO
+* Run different target tests
+* Check on initial plan see what can be added
 
 ### James
 
