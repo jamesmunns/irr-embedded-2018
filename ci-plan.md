@@ -14,10 +14,8 @@
 
 ## Tests to add
 
-> TODO: Add more detail
-
 * Make sure known-good embedded projects still compile and link
-  * [???] We could use `cargotest` infra or alike.
+  * We could use `cargotest` infra or alike.
   * Crate `cortex-m` is a good start because it already compiles on beta now.
   * `stm32f103xx-hal` includes `cortex-m` in dependency, so we'll use it later.
   * Additional "known good" embedded examples, such as:
@@ -39,7 +37,7 @@
 ## Idea 1
 
 * Create a pull request with 'minimal' test for `thumb*` targets
-  * [???] We will create a new docker file for testing: `thumbv7m-none-eabi/Dockerfile`
+  * [???] We will create a new docker file for testing: `thumb*-none-eabi*/Dockerfile`
   * [???] See `wasm32-unknown` docker image, because it also is a `no-std` target; needed test coverage might be similar.
 
 * Add `cargotest` which run `cargo test` using `qemu`
