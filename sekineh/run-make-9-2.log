@@ -1,0 +1,866 @@
+Updating only changed submodules
+Submodules updated in 0.03 seconds
+running: /home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo build --manifest-path /home/sekineh/rustme9/src/bootstrap/Cargo.toml --verbose
+       Fresh unicode-xid v0.1.0
+       Fresh ordermap v0.3.5
+       Fresh dtoa v0.4.3
+       Fresh fixedbitset v0.1.9
+       Fresh cc v1.0.18
+       Fresh cfg-if v0.1.4
+       Fresh itoa v0.4.2
+       Fresh libc v0.2.42
+       Fresh lazy_static v0.2.11
+       Fresh build_helper v0.1.0 (file:///home/sekineh/rustme9/src/build_helper)
+       Fresh getopts v0.2.17
+       Fresh proc-macro2 v0.4.8
+       Fresh petgraph v0.4.12
+       Fresh cmake v0.1.31
+       Fresh time v0.1.40
+       Fresh filetime v0.2.1
+       Fresh num_cpus v1.8.0
+       Fresh quote v0.6.3
+       Fresh serde v1.0.70
+       Fresh syn v0.14.4
+       Fresh toml v0.4.6
+       Fresh serde_json v1.0.24
+       Fresh serde_derive v1.0.70
+       Fresh bootstrap v0.0.0 (file:///home/sekineh/rustme9/src/bootstrap)
+    Finished dev [unoptimized] target(s) in 0.26s
+running: /home/sekineh/rustme9/build/bootstrap/debug/bootstrap test --target thumbv7m-none-eabi src/test/run-make -vv
+finding compilers
+CC_x86_64-unknown-linux-gnu = "cc"
+CFLAGS_x86_64-unknown-linux-gnu = ["-ffunction-sections", "-fdata-sections", "-fPIC", "-m64"]
+AR_x86_64-unknown-linux-gnu = "ar"
+CC_thumbv7m-none-eabi = "arm-none-eabi-gcc"
+CFLAGS_thumbv7m-none-eabi = ["-ffunction-sections", "-fdata-sections", "-fPIC", "-mthumb", "-march=armv7-m"]
+AR_thumbv7m-none-eabi = "arm-none-eabi-ar"
+CXX_x86_64-unknown-linux-gnu = "c++"
+running sanity check
+learning about cargo
+> Assemble { target_compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  > Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    < Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        > Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          > StartupObjects { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          < StartupObjects { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          < Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          > StdLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+            > Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+              c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+            < Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+            > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+            < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+          < StdLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        < Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        > TestLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+          < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+        < TestLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      < Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > RustcLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+        < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+      < RustcLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    < Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > CodegenBackend { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+      c Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+      < Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+    < CodegenBackend { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+    > Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    < Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    > Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    < Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  < Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  > Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      > Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        > StartupObjects { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        < StartupObjects { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        > StdLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+          < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+        < StdLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      < Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      > TestLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+        < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+      < TestLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    < Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > RustcLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+      < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+    < RustcLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  < Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  > CodegenBackend { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+    c Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+  < CodegenBackend { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+  > Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  < Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  > Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  < Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+< Assemble { target_compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+> RunMake { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+  > Compiletest { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi", mode: "run-make", suite: "run-make", path: Some("src/test/run-make"), compare_mode: None }
+    > TestHelpers { target: "thumbv7m-none-eabi" }
+    < TestHelpers { target: "thumbv7m-none-eabi" }
+    > RemoteCopyLibs { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    < RemoteCopyLibs { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > Compiletest { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      > ToolBuild { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", tool: "compiletest", path: "src/tools/compiletest", mode: ToolBootstrap, is_optional_tool: false, source_type: InTree, extra_features: [] }
+        c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      < ToolBuild { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", tool: "compiletest", path: "src/tools/compiletest", mode: ToolBootstrap, is_optional_tool: false, source_type: InTree, extra_features: [] }
+    < Compiletest { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    > Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+      c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    < Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    c Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+  < Compiletest { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi", mode: "run-make", suite: "run-make", path: Some("src/test/run-make"), compare_mode: None }
+< RunMake { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+> Assemble { target_compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  > Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    < Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        > Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          > StartupObjects { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          < StartupObjects { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          < Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+Building stage0 std artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--features" "panic-unwind jemalloc backtrace" "--manifest-path" "/home/sekineh/rustme9/src/libstd/Cargo.toml" "--message-format" "json"
+       Fresh cc v1.0.18
+       Fresh core v0.0.0 (file:///home/sekineh/rustme9/src/libcore)
+       Fresh build_helper v0.1.0 (file:///home/sekineh/rustme9/src/build_helper)
+       Fresh cmake v0.1.31
+       Fresh compiler_builtins v0.0.0 (file:///home/sekineh/rustme9/src/rustc/compiler_builtins_shim)
+       Fresh libc v0.0.0 (file:///home/sekineh/rustme9/src/rustc/libc_shim)
+       Fresh alloc v0.0.0 (file:///home/sekineh/rustme9/src/liballoc)
+       Fresh alloc_system v0.0.0 (file:///home/sekineh/rustme9/src/liballoc_system)
+       Fresh unwind v0.0.0 (file:///home/sekineh/rustme9/src/libunwind)
+       Fresh panic_abort v0.0.0 (file:///home/sekineh/rustme9/src/libpanic_abort)
+       Fresh alloc_jemalloc v0.0.0 (file:///home/sekineh/rustme9/src/liballoc_jemalloc)
+       Fresh rustc_msan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_msan)
+       Fresh rustc_lsan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_lsan)
+       Fresh rustc_tsan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_tsan)
+       Fresh rustc_asan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_asan)
+       Fresh panic_unwind v0.0.0 (file:///home/sekineh/rustme9/src/libpanic_unwind)
+       Fresh std v0.0.0 (file:///home/sekineh/rustme9/src/libstd)
+    Finished release [optimized] target(s) in 0.24s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-std/x86_64-unknown-linux-gnu/release/.libstd.stamp"; contents equal and SystemTime { tv_sec: 1533561853, tv_nsec: 293816672 } <= SystemTime { tv_sec: 1533561853, tv_nsec: 333816672 }
+          c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+          > StdLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage0 std from stage0 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+            > Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+              c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+            < Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+            > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+            < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+          < StdLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        < Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+Building stage0 test artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--manifest-path" "/home/sekineh/rustme9/src/libtest/Cargo.toml" "--message-format" "json"
+       Fresh getopts v0.2.17
+       Fresh term v0.0.0 (file:///home/sekineh/rustme9/src/libterm)
+       Fresh test v0.0.0 (file:///home/sekineh/rustme9/src/libtest)
+    Finished release [optimized] target(s) in 0.18s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-test/x86_64-unknown-linux-gnu/release/.libtest.stamp"; contents equal and SystemTime { tv_sec: 1533561859, tv_nsec: 129816672 } <= SystemTime { tv_sec: 1533561859, tv_nsec: 153816672 }
+        c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+        > TestLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage0 test from stage0 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+          c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+          < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+        < TestLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      < Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+Building stage0 compiler artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--features" " jemalloc" "--manifest-path" "/home/sekineh/rustme9/src/rustc/Cargo.toml" "--message-format" "json"
+       Fresh cfg-if v0.1.4
+       Fresh nodrop v0.1.12
+       Fresh scopeguard v0.3.3
+       Fresh lazy_static v1.0.2
+       Fresh void v1.0.2
+       Fresh memoffset v0.2.1
+       Fresh libc v0.2.42
+       Fresh stable_deref_trait v1.1.0
+       Fresh byteorder v1.2.3
+       Fresh either v1.5.0
+       Fresh bitflags v1.0.3
+       Fresh serialize v0.0.0 (file:///home/sekineh/rustme9/src/libserialize)
+       Fresh scoped-tls v0.1.2
+       Fresh unicode-width v0.1.5
+       Fresh cc v1.0.18
+       Fresh termcolor v0.3.6
+       Fresh lazy_static v0.2.11
+       Fresh remove_dir_all v0.5.1
+       Fresh rustc-demangle v0.1.8
+       Fresh datafrog v0.1.0
+       Fresh fmt_macros v0.0.0 (file:///home/sekineh/rustme9/src/libfmt_macros)
+       Fresh graphviz v0.0.0 (file:///home/sekineh/rustme9/src/libgraphviz)
+       Fresh rustc-serialize v0.3.24
+       Fresh quick-error v1.2.2
+       Fresh rustc_platform_intrinsics v0.0.0 (file:///home/sekineh/rustme9/src/librustc_platform_intrinsics)
+       Fresh crossbeam-utils v0.2.2
+       Fresh log v0.4.3
+       Fresh arrayvec v0.4.7
+       Fresh log_settings v0.1.2
+       Fresh unreachable v1.0.0
+       Fresh num_cpus v1.8.0
+       Fresh rand v0.4.2
+       Fresh atty v0.2.11
+       Fresh owning_ref v0.3.3
+       Fresh rustc-hash v1.0.1
+       Fresh chalk-macros v0.1.0
+       Fresh rls-span v0.4.0
+       Fresh humantime v1.1.1
+       Fresh rustc_cratesio_shim v0.0.0 (file:///home/sekineh/rustme9/src/librustc_cratesio_shim)
+       Fresh ena v0.9.3
+       Fresh jobserver v0.1.11
+       Fresh crossbeam-epoch v0.3.1
+       Fresh smallvec v0.6.3
+       Fresh tempfile v3.0.2
+       Fresh polonius-engine v0.5.0
+       Fresh chalk-engine v0.6.0
+       Fresh rls-data v0.16.0
+       Fresh env_logger v0.5.10
+       Fresh rustc_target v0.0.0 (file:///home/sekineh/rustme9/src/librustc_target)
+       Fresh rustc_apfloat v0.0.0 (file:///home/sekineh/rustme9/src/librustc_apfloat)
+       Fresh crossbeam-deque v0.2.0
+       Fresh parking_lot_core v0.2.14
+       Fresh miniz-sys v0.1.10
+       Fresh backtrace-sys v0.1.23
+       Fresh rustc-rayon-core v0.1.1
+       Fresh parking_lot v0.5.5
+       Fresh flate2 v1.0.1
+       Fresh backtrace v0.3.9
+       Fresh rustc-rayon v0.1.1
+       Fresh rustc_data_structures v0.0.0 (file:///home/sekineh/rustme9/src/librustc_data_structures)
+       Fresh arena v0.0.0 (file:///home/sekineh/rustme9/src/libarena)
+       Fresh syntax_pos v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_pos)
+       Fresh rustc_errors v0.0.0 (file:///home/sekineh/rustme9/src/librustc_errors)
+       Fresh syntax v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax)
+       Fresh proc_macro v0.0.0 (file:///home/sekineh/rustme9/src/libproc_macro)
+       Fresh rustc v0.0.0 (file:///home/sekineh/rustme9/src/librustc)
+       Fresh syntax_ext v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_ext)
+       Fresh rustc_metadata_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata_utils)
+       Fresh rustc_incremental v0.0.0 (file:///home/sekineh/rustme9/src/librustc_incremental)
+       Fresh rustc_mir v0.0.0 (file:///home/sekineh/rustme9/src/librustc_mir)
+       Fresh rustc_typeck v0.0.0 (file:///home/sekineh/rustme9/src/librustc_typeck)
+       Fresh rustc_allocator v0.0.0 (file:///home/sekineh/rustme9/src/librustc_allocator)
+       Fresh rustc_traits v0.0.0 (file:///home/sekineh/rustme9/src/librustc_traits)
+       Fresh rustc_metadata v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata)
+       Fresh rustc_codegen_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_utils)
+       Fresh rustc_passes v0.0.0 (file:///home/sekineh/rustme9/src/librustc_passes)
+       Fresh rustc_borrowck v0.0.0 (file:///home/sekineh/rustme9/src/librustc_borrowck)
+       Fresh rustc_lint v0.0.0 (file:///home/sekineh/rustme9/src/librustc_lint)
+       Fresh rustc_save_analysis v0.0.0 (file:///home/sekineh/rustme9/src/librustc_save_analysis)
+       Fresh rustc_privacy v0.0.0 (file:///home/sekineh/rustme9/src/librustc_privacy)
+       Fresh rustc_plugin v0.0.0 (file:///home/sekineh/rustme9/src/librustc_plugin)
+       Fresh rustc_resolve v0.0.0 (file:///home/sekineh/rustme9/src/librustc_resolve)
+       Fresh rustc_driver v0.0.0 (file:///home/sekineh/rustme9/src/librustc_driver)
+       Fresh rustc-main v0.0.0 (file:///home/sekineh/rustme9/src/rustc)
+    Finished release [optimized] target(s) in 0.28s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-unknown-linux-gnu/release/.librustc.stamp"; contents equal and SystemTime { tv_sec: 1533562368, tv_nsec: 713816672 } <= SystemTime { tv_sec: 1533562369, tv_nsec: 205816672 }
+      c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > RustcLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage0 rustc from stage0 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+        c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        > CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+        < CleanTools { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+      < RustcLink { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    < Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > CodegenBackend { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+      c Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+      > Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+      < Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+Building stage0 codegen artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu, llvm)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--manifest-path" "/home/sekineh/rustme9/src/librustc_codegen_llvm/Cargo.toml" "--features" " jemalloc" "--message-format" "json"
+       Fresh nodrop v0.1.12
+       Fresh cfg-if v0.1.4
+       Fresh memoffset v0.2.1
+       Fresh lazy_static v1.0.2
+       Fresh scopeguard v0.3.3
+       Fresh void v1.0.2
+       Fresh libc v0.2.42
+       Fresh stable_deref_trait v1.1.0
+       Fresh byteorder v1.2.3
+       Fresh either v1.5.0
+       Fresh bitflags v1.0.3
+       Fresh serialize v0.0.0 (file:///home/sekineh/rustme9/src/libserialize)
+       Fresh unicode-width v0.1.5
+       Fresh scoped-tls v0.1.2
+       Fresh termcolor v0.3.6
+       Fresh lazy_static v0.2.11
+       Fresh remove_dir_all v0.5.1
+       Fresh rustc-demangle v0.1.8
+       Fresh datafrog v0.1.0
+       Fresh fmt_macros v0.0.0 (file:///home/sekineh/rustme9/src/libfmt_macros)
+       Fresh graphviz v0.0.0 (file:///home/sekineh/rustme9/src/libgraphviz)
+       Fresh build_helper v0.1.0 (file:///home/sekineh/rustme9/src/build_helper)
+       Fresh quick-error v1.2.2
+       Fresh cc v1.0.18
+       Fresh rustc_platform_intrinsics v0.0.0 (file:///home/sekineh/rustme9/src/librustc_platform_intrinsics)
+       Fresh arrayvec v0.4.7
+       Fresh crossbeam-utils v0.2.2
+       Fresh log v0.4.3
+       Fresh log_settings v0.1.2
+       Fresh unreachable v1.0.0
+       Fresh rand v0.4.2
+       Fresh num_cpus v1.8.0
+       Fresh atty v0.2.11
+       Fresh owning_ref v0.3.3
+       Fresh rustc-hash v1.0.1
+       Fresh chalk-macros v0.1.0
+       Fresh humantime v1.1.1
+       Fresh crossbeam-epoch v0.3.1
+       Fresh ena v0.9.3
+       Fresh rustc_cratesio_shim v0.0.0 (file:///home/sekineh/rustme9/src/librustc_cratesio_shim)
+       Fresh jobserver v0.1.11
+       Fresh smallvec v0.6.3
+       Fresh tempfile v3.0.2
+       Fresh polonius-engine v0.5.0
+       Fresh chalk-engine v0.6.0
+       Fresh env_logger v0.5.10
+       Fresh crossbeam-deque v0.2.0
+       Fresh rustc_target v0.0.0 (file:///home/sekineh/rustme9/src/librustc_target)
+       Fresh rustc_apfloat v0.0.0 (file:///home/sekineh/rustme9/src/librustc_apfloat)
+       Fresh parking_lot_core v0.2.14
+       Fresh miniz-sys v0.1.10
+       Fresh backtrace-sys v0.1.23
+       Fresh rustc_llvm v0.0.0 (file:///home/sekineh/rustme9/src/librustc_llvm)
+       Fresh rustc-rayon-core v0.1.1
+       Fresh parking_lot v0.5.5
+       Fresh flate2 v1.0.1
+       Fresh backtrace v0.3.9
+       Fresh rustc-rayon v0.1.1
+       Fresh rustc_data_structures v0.0.0 (file:///home/sekineh/rustme9/src/librustc_data_structures)
+       Fresh arena v0.0.0 (file:///home/sekineh/rustme9/src/libarena)
+       Fresh syntax_pos v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_pos)
+       Fresh rustc_errors v0.0.0 (file:///home/sekineh/rustme9/src/librustc_errors)
+       Fresh syntax v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax)
+       Fresh proc_macro v0.0.0 (file:///home/sekineh/rustme9/src/libproc_macro)
+       Fresh rustc v0.0.0 (file:///home/sekineh/rustme9/src/librustc)
+       Fresh rustc_incremental v0.0.0 (file:///home/sekineh/rustme9/src/librustc_incremental)
+       Fresh rustc_mir v0.0.0 (file:///home/sekineh/rustme9/src/librustc_mir)
+       Fresh rustc_metadata_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata_utils)
+       Fresh rustc_allocator v0.0.0 (file:///home/sekineh/rustme9/src/librustc_allocator)
+       Fresh rustc_codegen_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_utils)
+       Fresh rustc_codegen_llvm v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_llvm)
+    Finished release [optimized] target(s) in 0.21s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-rustc/x86_64-unknown-linux-gnu/release/.tmp.stamp"; contents equal and SystemTime { tv_sec: 1533563810, tv_nsec: 361816672 } <= SystemTime { tv_sec: 1533563810, tv_nsec: 437816672 }
+    < CodegenBackend { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+Assembling stage1 compiler (x86_64-unknown-linux-gnu)
+    > Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    < Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Libdir { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    > Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    < Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  < Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  > Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      > Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        > StartupObjects { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        < StartupObjects { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+Building stage1 std artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--features" "panic-unwind jemalloc backtrace" "--manifest-path" "/home/sekineh/rustme9/src/libstd/Cargo.toml" "--message-format" "json"
+       Fresh cc v1.0.18
+       Fresh core v0.0.0 (file:///home/sekineh/rustme9/src/libcore)
+       Fresh build_helper v0.1.0 (file:///home/sekineh/rustme9/src/build_helper)
+       Fresh cmake v0.1.31
+       Fresh compiler_builtins v0.0.0 (file:///home/sekineh/rustme9/src/rustc/compiler_builtins_shim)
+       Fresh libc v0.0.0 (file:///home/sekineh/rustme9/src/rustc/libc_shim)
+       Fresh alloc v0.0.0 (file:///home/sekineh/rustme9/src/liballoc)
+       Fresh unwind v0.0.0 (file:///home/sekineh/rustme9/src/libunwind)
+       Fresh alloc_system v0.0.0 (file:///home/sekineh/rustme9/src/liballoc_system)
+       Fresh alloc_jemalloc v0.0.0 (file:///home/sekineh/rustme9/src/liballoc_jemalloc)
+       Fresh panic_abort v0.0.0 (file:///home/sekineh/rustme9/src/libpanic_abort)
+       Fresh panic_unwind v0.0.0 (file:///home/sekineh/rustme9/src/libpanic_unwind)
+       Fresh rustc_lsan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_lsan)
+       Fresh rustc_msan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_msan)
+       Fresh rustc_tsan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_tsan)
+       Fresh rustc_asan v0.0.0 (file:///home/sekineh/rustme9/src/librustc_asan)
+       Fresh std v0.0.0 (file:///home/sekineh/rustme9/src/libstd)
+    Finished release [optimized] target(s) in 0.19s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage1-std/x86_64-unknown-linux-gnu/release/.libstd.stamp"; contents equal and SystemTime { tv_sec: 1533563851, tv_nsec: 705816672 } <= SystemTime { tv_sec: 1533563851, tv_nsec: 753816672 }
+        c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+        > StdLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage1 std from stage1 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+          c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+          > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+          < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Std }
+        < StdLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      < Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+Building stage1 test artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--manifest-path" "/home/sekineh/rustme9/src/libtest/Cargo.toml" "--message-format" "json"
+       Fresh term v0.0.0 (file:///home/sekineh/rustme9/src/libterm)
+       Fresh getopts v0.2.17
+       Fresh test v0.0.0 (file:///home/sekineh/rustme9/src/libtest)
+    Finished release [optimized] target(s) in 0.17s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage1-test/x86_64-unknown-linux-gnu/release/.libtest.stamp"; contents equal and SystemTime { tv_sec: 1533563858, tv_nsec: 445816672 } <= SystemTime { tv_sec: 1533563858, tv_nsec: 473816672 }
+      c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+      > TestLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage1 test from stage1 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+        c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+        > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+        < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Test }
+      < TestLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    < Test { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Std { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+Building stage1 compiler artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--features" " jemalloc" "--manifest-path" "/home/sekineh/rustme9/src/rustc/Cargo.toml" "--message-format" "json"
+       Fresh cfg-if v0.1.4
+       Fresh nodrop v0.1.12
+       Fresh void v1.0.2
+       Fresh lazy_static v1.0.2
+       Fresh memoffset v0.2.1
+       Fresh scopeguard v0.3.3
+       Fresh libc v0.2.42
+       Fresh stable_deref_trait v1.1.0
+       Fresh byteorder v1.2.3
+       Fresh bitflags v1.0.3
+       Fresh either v1.5.0
+       Fresh serialize v0.0.0 (file:///home/sekineh/rustme9/src/libserialize)
+       Fresh cc v1.0.18
+       Fresh unicode-width v0.1.5
+       Fresh scoped-tls v0.1.2
+       Fresh termcolor v0.3.6
+       Fresh lazy_static v0.2.11
+       Fresh datafrog v0.1.0
+       Fresh remove_dir_all v0.5.1
+       Fresh rustc-demangle v0.1.8
+       Fresh fmt_macros v0.0.0 (file:///home/sekineh/rustme9/src/libfmt_macros)
+       Fresh graphviz v0.0.0 (file:///home/sekineh/rustme9/src/libgraphviz)
+       Fresh rustc-serialize v0.3.24
+       Fresh rustc_platform_intrinsics v0.0.0 (file:///home/sekineh/rustme9/src/librustc_platform_intrinsics)
+       Fresh quick-error v1.2.2
+       Fresh crossbeam-utils v0.2.2
+       Fresh log v0.4.3
+       Fresh arrayvec v0.4.7
+       Fresh unreachable v1.0.0
+       Fresh log_settings v0.1.2
+       Fresh num_cpus v1.8.0
+       Fresh rand v0.4.2
+       Fresh atty v0.2.11
+       Fresh owning_ref v0.3.3
+       Fresh rustc-hash v1.0.1
+       Fresh chalk-macros v0.1.0
+       Fresh rls-span v0.4.0
+       Fresh humantime v1.1.1
+       Fresh rustc_cratesio_shim v0.0.0 (file:///home/sekineh/rustme9/src/librustc_cratesio_shim)
+       Fresh ena v0.9.3
+       Fresh jobserver v0.1.11
+       Fresh crossbeam-epoch v0.3.1
+       Fresh smallvec v0.6.3
+       Fresh tempfile v3.0.2
+       Fresh polonius-engine v0.5.0
+       Fresh chalk-engine v0.6.0
+       Fresh rls-data v0.16.0
+       Fresh env_logger v0.5.10
+       Fresh rustc_target v0.0.0 (file:///home/sekineh/rustme9/src/librustc_target)
+       Fresh rustc_apfloat v0.0.0 (file:///home/sekineh/rustme9/src/librustc_apfloat)
+       Fresh crossbeam-deque v0.2.0
+       Fresh parking_lot_core v0.2.14
+       Fresh miniz-sys v0.1.10
+       Fresh backtrace-sys v0.1.23
+       Fresh rustc-rayon-core v0.1.1
+       Fresh parking_lot v0.5.5
+       Fresh flate2 v1.0.1
+       Fresh backtrace v0.3.9
+       Fresh rustc-rayon v0.1.1
+       Fresh rustc_data_structures v0.0.0 (file:///home/sekineh/rustme9/src/librustc_data_structures)
+       Fresh arena v0.0.0 (file:///home/sekineh/rustme9/src/libarena)
+       Fresh syntax_pos v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_pos)
+       Fresh rustc_errors v0.0.0 (file:///home/sekineh/rustme9/src/librustc_errors)
+       Fresh syntax v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax)
+       Fresh proc_macro v0.0.0 (file:///home/sekineh/rustme9/src/libproc_macro)
+       Fresh rustc v0.0.0 (file:///home/sekineh/rustme9/src/librustc)
+       Fresh syntax_ext v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_ext)
+       Fresh rustc_metadata_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata_utils)
+       Fresh rustc_mir v0.0.0 (file:///home/sekineh/rustme9/src/librustc_mir)
+       Fresh rustc_typeck v0.0.0 (file:///home/sekineh/rustme9/src/librustc_typeck)
+       Fresh rustc_incremental v0.0.0 (file:///home/sekineh/rustme9/src/librustc_incremental)
+       Fresh rustc_traits v0.0.0 (file:///home/sekineh/rustme9/src/librustc_traits)
+       Fresh rustc_allocator v0.0.0 (file:///home/sekineh/rustme9/src/librustc_allocator)
+       Fresh rustc_metadata v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata)
+       Fresh rustc_passes v0.0.0 (file:///home/sekineh/rustme9/src/librustc_passes)
+       Fresh rustc_borrowck v0.0.0 (file:///home/sekineh/rustme9/src/librustc_borrowck)
+       Fresh rustc_lint v0.0.0 (file:///home/sekineh/rustme9/src/librustc_lint)
+       Fresh rustc_privacy v0.0.0 (file:///home/sekineh/rustme9/src/librustc_privacy)
+       Fresh rustc_save_analysis v0.0.0 (file:///home/sekineh/rustme9/src/librustc_save_analysis)
+       Fresh rustc_codegen_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_utils)
+       Fresh rustc_plugin v0.0.0 (file:///home/sekineh/rustme9/src/librustc_plugin)
+       Fresh rustc_resolve v0.0.0 (file:///home/sekineh/rustme9/src/librustc_resolve)
+       Fresh rustc_driver v0.0.0 (file:///home/sekineh/rustme9/src/librustc_driver)
+       Fresh rustc-main v0.0.0 (file:///home/sekineh/rustme9/src/rustc)
+    Finished release [optimized] target(s) in 0.21s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage1-rustc/x86_64-unknown-linux-gnu/release/.librustc.stamp"; contents equal and SystemTime { tv_sec: 1533564414, tv_nsec: 605816672 } <= SystemTime { tv_sec: 1533564415, tv_nsec: 61816672 }
+    c Assemble { target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    > RustcLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+Copying stage1 rustc from stage1 (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu / x86_64-unknown-linux-gnu)
+      c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      > CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+      < CleanTools { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", cause: Rustc }
+    < RustcLink { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target_compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  < Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+  > CodegenBackend { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+    c Rustc { target: "x86_64-unknown-linux-gnu", compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Sysroot { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" } }
+    c Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+Building stage1 codegen artifacts (x86_64-unknown-linux-gnu -> x86_64-unknown-linux-gnu, llvm)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--manifest-path" "/home/sekineh/rustme9/src/librustc_codegen_llvm/Cargo.toml" "--features" " jemalloc" "--message-format" "json"
+       Fresh nodrop v0.1.12
+       Fresh cfg-if v0.1.4
+       Fresh lazy_static v1.0.2
+       Fresh void v1.0.2
+       Fresh scopeguard v0.3.3
+       Fresh memoffset v0.2.1
+       Fresh libc v0.2.42
+       Fresh stable_deref_trait v1.1.0
+       Fresh byteorder v1.2.3
+       Fresh bitflags v1.0.3
+       Fresh either v1.5.0
+       Fresh serialize v0.0.0 (file:///home/sekineh/rustme9/src/libserialize)
+       Fresh unicode-width v0.1.5
+       Fresh scoped-tls v0.1.2
+       Fresh termcolor v0.3.6
+       Fresh lazy_static v0.2.11
+       Fresh remove_dir_all v0.5.1
+       Fresh rustc-demangle v0.1.8
+       Fresh datafrog v0.1.0
+       Fresh graphviz v0.0.0 (file:///home/sekineh/rustme9/src/libgraphviz)
+       Fresh build_helper v0.1.0 (file:///home/sekineh/rustme9/src/build_helper)
+       Fresh fmt_macros v0.0.0 (file:///home/sekineh/rustme9/src/libfmt_macros)
+       Fresh quick-error v1.2.2
+       Fresh cc v1.0.18
+       Fresh rustc_platform_intrinsics v0.0.0 (file:///home/sekineh/rustme9/src/librustc_platform_intrinsics)
+       Fresh arrayvec v0.4.7
+       Fresh crossbeam-utils v0.2.2
+       Fresh log v0.4.3
+       Fresh log_settings v0.1.2
+       Fresh unreachable v1.0.0
+       Fresh rand v0.4.2
+       Fresh num_cpus v1.8.0
+       Fresh atty v0.2.11
+       Fresh owning_ref v0.3.3
+       Fresh rustc-hash v1.0.1
+       Fresh chalk-macros v0.1.0
+       Fresh humantime v1.1.1
+       Fresh crossbeam-epoch v0.3.1
+       Fresh ena v0.9.3
+       Fresh rustc_cratesio_shim v0.0.0 (file:///home/sekineh/rustme9/src/librustc_cratesio_shim)
+       Fresh jobserver v0.1.11
+       Fresh smallvec v0.6.3
+       Fresh tempfile v3.0.2
+       Fresh polonius-engine v0.5.0
+       Fresh chalk-engine v0.6.0
+       Fresh env_logger v0.5.10
+       Fresh crossbeam-deque v0.2.0
+       Fresh rustc_target v0.0.0 (file:///home/sekineh/rustme9/src/librustc_target)
+       Fresh rustc_apfloat v0.0.0 (file:///home/sekineh/rustme9/src/librustc_apfloat)
+       Fresh parking_lot_core v0.2.14
+       Fresh miniz-sys v0.1.10
+       Fresh backtrace-sys v0.1.23
+       Fresh rustc_llvm v0.0.0 (file:///home/sekineh/rustme9/src/librustc_llvm)
+       Fresh rustc-rayon-core v0.1.1
+       Fresh parking_lot v0.5.5
+       Fresh flate2 v1.0.1
+       Fresh backtrace v0.3.9
+       Fresh rustc-rayon v0.1.1
+       Fresh rustc_data_structures v0.0.0 (file:///home/sekineh/rustme9/src/librustc_data_structures)
+       Fresh arena v0.0.0 (file:///home/sekineh/rustme9/src/libarena)
+       Fresh syntax_pos v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax_pos)
+       Fresh rustc_errors v0.0.0 (file:///home/sekineh/rustme9/src/librustc_errors)
+       Fresh syntax v0.0.0 (file:///home/sekineh/rustme9/src/libsyntax)
+       Fresh proc_macro v0.0.0 (file:///home/sekineh/rustme9/src/libproc_macro)
+       Fresh rustc v0.0.0 (file:///home/sekineh/rustme9/src/librustc)
+       Fresh rustc_metadata_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_metadata_utils)
+       Fresh rustc_mir v0.0.0 (file:///home/sekineh/rustme9/src/librustc_mir)
+       Fresh rustc_incremental v0.0.0 (file:///home/sekineh/rustme9/src/librustc_incremental)
+       Fresh rustc_allocator v0.0.0 (file:///home/sekineh/rustme9/src/librustc_allocator)
+       Fresh rustc_codegen_utils v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_utils)
+       Fresh rustc_codegen_llvm v0.0.0 (file:///home/sekineh/rustme9/src/librustc_codegen_llvm)
+    Finished release [optimized] target(s) in 0.20s
+not updating "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage1-rustc/x86_64-unknown-linux-gnu/release/.tmp.stamp"; contents equal and SystemTime { tv_sec: 1533564467, tv_nsec: 137816672 } <= SystemTime { tv_sec: 1533564467, tv_nsec: 237816672 }
+  < CodegenBackend { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", backend: "llvm" }
+Assembling stage2 compiler (x86_64-unknown-linux-gnu)
+  > Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  < Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  c Libdir { compiler: Compiler { stage: 1, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  > Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+  < Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+  c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+< Assemble { target_compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+> RunMake { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+  > Compiletest { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi", mode: "run-make", suite: "run-make", path: Some("src/test/run-make"), compare_mode: None }
+    > TestHelpers { target: "thumbv7m-none-eabi" }
+    < TestHelpers { target: "thumbv7m-none-eabi" }
+    > RemoteCopyLibs { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    < RemoteCopyLibs { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    > Compiletest { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+      > ToolBuild { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", tool: "compiletest", path: "src/tools/compiletest", mode: ToolBootstrap, is_optional_tool: false, source_type: InTree, extra_features: [] }
+        c Sysroot { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+Building stage0 tool compiletest (x86_64-unknown-linux-gnu)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo" "build" "--target" "x86_64-unknown-linux-gnu" "-j" "8" "-v" "--release" "--manifest-path" "/home/sekineh/rustme9/src/tools/compiletest/Cargo.toml" "--features" "" "--message-format" "json"
+       Fresh unicode-xid v0.1.0
+       Fresh cc v1.0.18
+       Fresh libc v0.2.42
+       Fresh rustc-demangle v0.1.8
+       Fresh cfg-if v0.1.4
+       Fresh void v1.0.2
+       Fresh itoa v0.4.2
+       Fresh ucd-util v0.1.1
+       Fresh lazy_static v1.0.2
+       Fresh quick-error v1.2.2
+       Fresh dtoa v0.4.3
+       Fresh termcolor v0.3.6
+       Fresh utf8-ranges v1.0.0
+       Fresh getopts v0.2.17
+       Fresh diff v0.1.11
+       Fresh proc-macro2 v0.4.8
+       Fresh memchr v2.0.1
+       Fresh atty v0.2.11
+       Fresh log v0.4.3
+       Fresh filetime v0.2.1
+       Fresh unreachable v1.0.0
+       Fresh regex-syntax v0.5.6
+       Fresh humantime v1.1.1
+       Fresh quote v0.6.3
+       Fresh aho-corasick v0.6.6
+       Fresh serde v1.0.70
+       Fresh thread_local v0.3.5
+       Fresh env_logger v0.5.10
+       Fresh syn v0.14.4
+       Fresh backtrace-sys v0.1.23
+       Fresh serde_json v1.0.24
+       Fresh regex v0.2.11
+       Fresh synstructure v0.9.0
+       Fresh serde_derive v1.0.70
+       Fresh backtrace v0.3.9
+       Fresh failure_derive v0.1.2
+       Fresh failure v0.1.2
+       Fresh rustfix v0.4.2
+       Fresh compiletest v0.0.0 (file:///home/sekineh/rustme9/src/tools/compiletest)
+    Finished release [optimized] target(s) in 0.19s
+      < ToolBuild { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu", tool: "compiletest", path: "src/tools/compiletest", mode: ToolBootstrap, is_optional_tool: false, source_type: InTree, extra_features: [] }
+    < Compiletest { compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" }, target: "x86_64-unknown-linux-gnu" }
+    c Assemble { target_compiler: Compiler { stage: 0, host: "x86_64-unknown-linux-gnu" } }
+    c Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    > Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+      c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    < Libdir { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" }, target: "thumbv7m-none-eabi" }
+    c Sysroot { compiler: Compiler { stage: 2, host: "x86_64-unknown-linux-gnu" } }
+    c Llvm { target: "x86_64-unknown-linux-gnu", emscripten: false }
+Check compiletest suite=run-make mode=run-make (x86_64-unknown-linux-gnu -> thumbv7m-none-eabi)
+running: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-tools-bin/compiletest" "--compile-lib-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib" "--run-lib-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib/rustlib/thumbv7m-none-eabi/lib" "--rustc-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc" "--src-base" "/home/sekineh/rustme9/src/test/run-make" "--build-base" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/test/run-make" "--stage-id" "stage2-thumbv7m-none-eabi" "--mode" "run-make" "--target" "thumbv7m-none-eabi" "--host" "x86_64-unknown-linux-gnu" "--llvm-filecheck" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/llvm/build/bin/FileCheck" "--nodejs" "/usr/bin/nodejs" "--linker" "arm-none-eabi-gcc" "--host-rustcflags" "-Crpath -O -Zunstable-options " "--target-rustcflags" "-Crpath -O -Zunstable-options  -Lnative=/home/sekineh/rustme9/build/thumbv7m-none-eabi/native/rust-test-helpers" "--docck-python" "/usr/bin/python" "--lldb-python" "/usr/bin/python" "--gdb" "/usr/bin/gdb" "--verbose" "--quiet" "--llvm-version" "7.0.0\n" "--cc" "" "--cxx" "" "--cflags" "" "--llvm-components" "" "--llvm-cxxflags" "" "--adb-path" "adb" "--adb-test-dir" "/data/tmp/work" "--android-cross-path" ""
+configuration:
+compile_lib_path: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib"
+run_lib_path: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib/rustlib/thumbv7m-none-eabi/lib"
+rustc_path: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc"
+rustdoc_path: None
+src_base: "/home/sekineh/rustme9/src/test/run-make"
+build_base: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/test/run-make"
+stage_id: stage2-thumbv7m-none-eabi
+mode: run-make
+run_ignored: false
+filter: (none)
+filter_exact: false
+runtool: (none)
+host-rustcflags: -Crpath -O -Zunstable-options 
+target-rustcflags: -Crpath -O -Zunstable-options  -Lnative=/home/sekineh/rustme9/build/thumbv7m-none-eabi/native/rust-test-helpers
+target: thumbv7m-none-eabi
+host: x86_64-unknown-linux-gnu
+android-cross-path: ""
+adb_path: "adb"
+adb_test_dir: "/data/tmp/work"
+adb_device_status: false
+ar: ar
+linker: Some("arm-none-eabi-gcc")
+verbose: true
+quiet: true
+
+
+
+running 5 tests
+iiiiF
+failures:
+
+---- [run-make] run-make/thumb-none-cortex-m stdout ----
+
+
+
+error: make failed
+status: exit code: 2
+command: "make"
+stdout:
+------------------------------------------
+env > env.txt
+mkdir -p /tmp/safe_place
+cd /tmp/safe_place && rm -rf cortex-m
+cd /tmp/safe_place && /home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo clone cortex-m --vers 0.5.0
+pwd
+/home/sekineh/rustme9/src/test/run-make/thumb-none-cortex-m
+cd /tmp/safe_place && cd cortex-m && /home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0/bin/cargo build --target thumbv7m-none-eabi -vv
+Makefile:11: recipe for target 'all' failed
+
+------------------------------------------
+stderr:
+------------------------------------------
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+   Compiling cc v1.0.18
+   Compiling vcell v0.1.0
+   Compiling bare-metal v0.2.1
+   Compiling aligned v0.2.0
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name bare_metal /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/bare-metal-0.2.1/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=347fe966f6efc652 -C extra-filename=-347fe966f6efc652 --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name aligned /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/aligned-0.2.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=e9ca321795b6d99e -C extra-filename=-e9ca321795b6d99e --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name vcell /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/vcell-0.1.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=f461af7dde74e90b -C extra-filename=-f461af7dde74e90b --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `thumbv7m-none-eabi` target may not be installed
+error[E0463]: can't find crate for `core`
+
+  |
+  = note: the `thumbv7m-none-eabi` target may not be installed
+
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `thumbv7m-none-eabi` target may not be installed
+
+error: aborting due to previous error
+error: aborting due to previous error
+
+
+For more information about this error, try `rustc --explain E0463`.For more information about this error, try `rustc --explain E0463`.
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: Could not compile `vcell`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name vcell /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/vcell-0.1.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=f461af7dde74e90b -C extra-filename=-f461af7dde74e90b --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error: Could not compile `aligned`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name aligned /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/aligned-0.2.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=e9ca321795b6d99e -C extra-filename=-e9ca321795b6d99e --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error: Could not compile `bare-metal`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name bare_metal /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/bare-metal-0.2.1/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=347fe966f6efc652 -C extra-filename=-347fe966f6efc652 --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error[E0463]: can't find crate for `std`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: Could not compile `cc`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+make: *** [all] Error 101
+
+------------------------------------------
+
+thread '[run-make] run-make/thumb-none-cortex-m' panicked at 'explicit panic', tools/compiletest/src/runtest.rs:3149:9
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+
+
+failures:
+    [run-make] run-make/thumb-none-cortex-m
+
+test result: FAILED. 0 passed; 1 failed; 4 ignored; 0 measured; 0 filtered out
+
+thread 'main' panicked at 'Some tests failed', tools/compiletest/src/main.rs:498:22
+
+
+command did not execute successfully: "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage0-tools-bin/compiletest" "--compile-lib-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib" "--run-lib-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib/rustlib/thumbv7m-none-eabi/lib" "--rustc-path" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc" "--src-base" "/home/sekineh/rustme9/src/test/run-make" "--build-base" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/test/run-make" "--stage-id" "stage2-thumbv7m-none-eabi" "--mode" "run-make" "--target" "thumbv7m-none-eabi" "--host" "x86_64-unknown-linux-gnu" "--llvm-filecheck" "/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/llvm/build/bin/FileCheck" "--nodejs" "/usr/bin/nodejs" "--linker" "arm-none-eabi-gcc" "--host-rustcflags" "-Crpath -O -Zunstable-options " "--target-rustcflags" "-Crpath -O -Zunstable-options  -Lnative=/home/sekineh/rustme9/build/thumbv7m-none-eabi/native/rust-test-helpers" "--docck-python" "/usr/bin/python" "--lldb-python" "/usr/bin/python" "--gdb" "/usr/bin/gdb" "--verbose" "--quiet" "--llvm-version" "7.0.0\n" "--cc" "" "--cxx" "" "--cflags" "" "--llvm-components" "" "--llvm-cxxflags" "" "--adb-path" "adb" "--adb-test-dir" "/data/tmp/work" "--android-cross-path" ""
+expected success, got: exit code: 101
+
+
+Traceback (most recent call last):
+  File "./x.py", line 20, in <module>
+    bootstrap.main()
+  File "/home/sekineh/rustme9/src/bootstrap/bootstrap.py", line 846, in main
+    bootstrap(help_triggered)
+  File "/home/sekineh/rustme9/src/bootstrap/bootstrap.py", line 837, in bootstrap
+    run(args, env=env, verbose=build.verbose)
+  File "/home/sekineh/rustme9/src/bootstrap/bootstrap.py", line 151, in run
+    raise RuntimeError(err)
+RuntimeError: failed to run: /home/sekineh/rustme9/build/bootstrap/debug/bootstrap test --target thumbv7m-none-eabi src/test/run-make -vv
