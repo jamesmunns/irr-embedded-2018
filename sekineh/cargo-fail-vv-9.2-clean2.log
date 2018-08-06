@@ -1,0 +1,98 @@
+DEBUG 2018-08-06T18:15:35Z: cargo::core::workspace: find_root - trying /tmp/safe_place/Cargo.toml
+DEBUG 2018-08-06T18:15:35Z: cargo::core::workspace: find_root - trying /tmp/Cargo.toml
+DEBUG 2018-08-06T18:15:35Z: cargo::core::workspace: find_root - trying /Cargo.toml
+DEBUG 2018-08-06T18:15:35Z: cargo::core::workspace: find_members - only me as a member
+DEBUG 2018-08-06T18:15:35Z: cargo::core::registry: load/missing  file:///tmp/safe_place/cortex-m
+DEBUG 2018-08-06T18:15:35Z: cargo::core::registry: loading source file:///tmp/safe_place/cortex-m
+DEBUG 2018-08-06T18:15:35Z: cargo::sources::config: loading: file:///tmp/safe_place/cortex-m
+DEBUG 2018-08-06T18:15:35Z: cargo::core::resolver: initial activation: cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m)
+DEBUG 2018-08-06T18:15:35Z: cargo::core::registry: load/missing  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:35Z: cargo::core::registry: loading source registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:35Z: cargo::sources::config: loading: registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:35Z: cargo::sources::registry::remote: updating the index
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:35Z: cargo::sources::git::utils: attempting GitHub fast path for https://github.com/rust-lang/crates.io-index
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m)
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer volatile-register v0.2.0
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer bare-metal v0.2.1
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer vcell v0.1.0
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer cc v1.0.18
+DEBUG 2018-08-06T18:15:36Z: cargo::ops::resolve: attempting to prefer aligned v0.2.0
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/locked   file:///tmp/safe_place/cortex-m
+DEBUG 2018-08-06T18:15:36Z: cargo::core::resolver: initial activation: cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m)
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+DEBUG 2018-08-06T18:15:36Z: cargo::core::registry: load/precise  registry `https://github.com/rust-lang/crates.io-index`
+ INFO 2018-08-06T18:15:36Z: cargo::util::rustc: failed to read rustc info cache: failed to read `/tmp/safe_place/cortex-m/target/.rustc_info.json`
+ INFO 2018-08-06T18:15:36Z: cargo::util::rustc: rustc info cache miss
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::build_context: probe_target_info
+ INFO 2018-08-06T18:15:36Z: cargo::util::rustc: rustc info cache miss
+ INFO 2018-08-06T18:15:36Z: cargo::util::rustc: rustc info cache miss
+ INFO 2018-08-06T18:15:36Z: jobserver::imp: created a jobserver: Client { read: File { fd: 3, path: "pipe:[250634]", read: true, write: false }, write: File { fd: 10, path: "pipe:[250634]", read: false, write: true } }
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/cortex-m-56cea1349387f89c/lib-cortex_m-56cea1349387f89c
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m): failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/cortex-m-56cea1349387f89c/lib-cortex_m-56cea1349387f89c`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libcortex_m-56cea1349387f89c.rlib", hardlink: Some("/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/libcortex_m.rlib"), flavor: Linkable }]
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libcortex_m-56cea1349387f89c.rlib"
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libaligned-e9ca321795b6d99e.rlib", hardlink: None, flavor: Linkable }]
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libbare_metal-347fe966f6efc652.rlib", hardlink: None, flavor: Linkable }]
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libvolatile_register-f18ff5c4138461c4.rlib", hardlink: None, flavor: Linkable }]
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/aligned-e9ca321795b6d99e/lib-aligned-e9ca321795b6d99e
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for aligned v0.2.0: failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/aligned-e9ca321795b6d99e/lib-aligned-e9ca321795b6d99e`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libaligned-e9ca321795b6d99e.rlib"
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/bare-metal-347fe966f6efc652/lib-bare_metal-347fe966f6efc652
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for bare-metal v0.2.1: failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/bare-metal-347fe966f6efc652/lib-bare_metal-347fe966f6efc652`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libbare_metal-347fe966f6efc652.rlib"
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/cortex-m-1f0dd38918e335f9/build
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: old local fingerprints deps
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m): failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/cortex-m-1f0dd38918e335f9/build`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/debug/.fingerprint/cortex-m-88b417abaf12138a/build-script-build_script_build-88b417abaf12138a
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for cortex-m v0.5.3 (file:///tmp/safe_place/cortex-m): failed to read `/tmp/safe_place/cortex-m/target/debug/.fingerprint/cortex-m-88b417abaf12138a/build-script-build_script_build-88b417abaf12138a`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/debug/build/cortex-m-88b417abaf12138a/build_script_build-88b417abaf12138a", hardlink: Some("/tmp/safe_place/cortex-m/target/debug/build/cortex-m-88b417abaf12138a/build-script-build"), flavor: Normal }]
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/debug/build/cortex-m-88b417abaf12138a/build_script_build-88b417abaf12138a"
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/debug/deps/libcc-c56cb60ec233dff5.rlib", hardlink: None, flavor: Linkable }]
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/debug/.fingerprint/cc-c56cb60ec233dff5/lib-cc-c56cb60ec233dff5
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for cc v1.0.18: failed to read `/tmp/safe_place/cortex-m/target/debug/.fingerprint/cc-c56cb60ec233dff5/lib-cc-c56cb60ec233dff5`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/debug/deps/libcc-c56cb60ec233dff5.rlib"
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/volatile-register-f18ff5c4138461c4/lib-volatile_register-f18ff5c4138461c4
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for volatile-register v0.2.0: failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/volatile-register-f18ff5c4138461c4/lib-volatile_register-f18ff5c4138461c4`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libvolatile_register-f18ff5c4138461c4.rlib"
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::context::compilation_files: Target filenames: [OutputFile { path: "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libvcell-f461af7dde74e90b.rlib", hardlink: None, flavor: Linkable }]
+DEBUG 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint at: /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/vcell-f461af7dde74e90b/lib-vcell-f461af7dde74e90b
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: fingerprint error for vcell v0.1.0: failed to read `/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/.fingerprint/vcell-f461af7dde74e90b/lib-vcell-f461af7dde74e90b`
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint:   cause: No such file or directory (os error 2)
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::fingerprint: missing output path "/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps/libvcell-f461af7dde74e90b.rlib"
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::job_queue: start: cc v1.0.18 => Target(lib)/Profile(dev) => Host
+   Compiling cc v1.0.18
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+ INFO 2018-08-06T18:15:36Z: jobserver::imp: using env fds 3 and 10
+ INFO 2018-08-06T18:15:36Z: rustc_driver: codegen backend candidate: /home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib/rustlib/x86_64-unknown-linux-gnu/codegen-backends
+ INFO 2018-08-06T18:15:36Z: rustc_driver: probing /home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/lib/rustlib/x86_64-unknown-linux-gnu/codegen-backends for a codegen backend
+ INFO 2018-08-06T18:15:36Z: rustc_metadata::creader: resolving crate `extern crate std as std`
+ INFO 2018-08-06T18:15:36Z: rustc_metadata::creader: falling back to a load
+error[E0463]: can't find crate for `std`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+ INFO 2018-08-06T18:15:36Z: cargo::core::compiler::job_queue: end: cc v1.0.18 => Target(lib)/Profile(dev) => Host
+ INFO 2018-08-06T18:15:36Z: cargo::util::rustc: updated rustc info cache
+DEBUG 2018-08-06T18:15:36Z: cargo: exit_with_error; err=CliError { error: Some(ProcessError { desc: "process didn\'t exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)", exit: Some(ExitStatus(ExitStatus(256))), output: None }
+
+Could not compile `cc`.), unknown: false, exit_code: 101 }
+error: Could not compile `cc`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
