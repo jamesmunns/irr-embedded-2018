@@ -1,0 +1,54 @@
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+   Compiling cc v1.0.18
+   Compiling vcell v0.1.0
+   Compiling aligned v0.2.0
+   Compiling bare-metal v0.2.1
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name vcell /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/vcell-0.1.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=f461af7dde74e90b -C extra-filename=-f461af7dde74e90b --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name aligned /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/aligned-0.2.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=e9ca321795b6d99e -C extra-filename=-e9ca321795b6d99e --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+     Running `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name bare_metal /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/bare-metal-0.2.1/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=347fe966f6efc652 -C extra-filename=-347fe966f6efc652 --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn`
+error[E0463]: can't find crate for `core`
+error[E0463]: can't find crate for `core`
+error[E0463]: can't find crate for `core`
+  |
+  |
+  |
+  = note: the `thumbv7m-none-eabi` target may not be installed
+  = note: the `thumbv7m-none-eabi` target may not be installed
+
+
+  = note: the `thumbv7m-none-eabi` target may not be installed
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: aborting due to previous error
+error: aborting due to previous error
+
+
+For more information about this error, try `rustc --explain E0463`.For more information about this error, try `rustc --explain E0463`.
+
+error: Could not compile `aligned`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name aligned /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/aligned-0.2.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=e9ca321795b6d99e -C extra-filename=-e9ca321795b6d99e --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error: Could not compile `bare-metal`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name bare_metal /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/bare-metal-0.2.1/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=347fe966f6efc652 -C extra-filename=-347fe966f6efc652 --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error: Could not compile `vcell`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name vcell /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/vcell-0.1.0/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=f461af7dde74e90b -C extra-filename=-f461af7dde74e90b --out-dir /tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps --target thumbv7m-none-eabi -L dependency=/tmp/safe_place/cortex-m/target/thumbv7m-none-eabi/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
+warning: build failed, waiting for other jobs to finish...
+error[E0463]: can't find crate for `std`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0463`.
+error: Could not compile `cc`.
+
+Caused by:
+  process didn't exit successfully: `/home/sekineh/rustme9/build/x86_64-unknown-linux-gnu/stage2/bin/rustc --crate-name cc /home/sekineh/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.18/src/lib.rs --crate-type lib --emit=dep-info,link -C debuginfo=2 -C metadata=c56cb60ec233dff5 -C extra-filename=-c56cb60ec233dff5 --out-dir /tmp/safe_place/cortex-m/target/debug/deps -L dependency=/tmp/safe_place/cortex-m/target/debug/deps --cap-lints warn` (exit code: 1)
